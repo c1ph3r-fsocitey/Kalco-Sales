@@ -1,7 +1,10 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { SITE, whatsappLink } from '../lib/site.js';
 import { CATEGORIES } from '../data/products.js';
+import SplineScene from '../components/SplineScene.jsx';
+import Spotlight from '../components/Spotlight.jsx';
 import './Home.css';
 
 const fadeUp = {
@@ -54,13 +57,28 @@ const VALUES = [
   },
 ];
 
+function useDesktop(minWidth = 900) {
+  const [isDesktop, setIsDesktop] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia(`(min-width: ${minWidth}px)`);
+    const update = () => setIsDesktop(mq.matches);
+    update();
+    mq.addEventListener('change', update);
+    return () => mq.removeEventListener('change', update);
+  }, [minWidth]);
+  return isDesktop;
+}
+
 export default function Home() {
+  const isDesktop = useDesktop();
+
   return (
     <>
       {/* Hero */}
       <section className="hero">
+        <Spotlight fill="white" />
         <div className="container hero-inner">
-          <motion.div initial="hidden" animate="visible" variants={fadeUp}>
+          <motion.div className="hero-text" initial="hidden" animate="visible" variants={fadeUp}>
             <span className="hero-badge">Est. {SITE.established} · Karol Bagh, New Delhi</span>
             <h1>
               Best Quality Two-Wheeler
@@ -78,17 +96,29 @@ export default function Home() {
                   <polyline points="12 5 19 12 12 19" />
                 </svg>
               </Link>
-              <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
+              <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn btn-outline hero-btn-outline">
                 Enquire on WhatsApp
               </a>
             </div>
           </motion.div>
 
-          <motion.div
-            className="hero-stats"
-            initial="hidden"
-            animate="visible"
-          >
+          {isDesktop && (
+            <motion.div
+              className="hero-visual"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+            >
+              <SplineScene
+                scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+                className="hero-spline"
+              />
+            </motion.div>
+          )}
+        </div>
+
+        <div className="container">
+          <motion.div className="hero-stats" initial="hidden" animate="visible">
             {STATS.map((s, i) => (
               <motion.div key={s.label} className="stat-card" custom={i + 2} variants={fadeUp}>
                 <span className="stat-value">{s.value}</span>
