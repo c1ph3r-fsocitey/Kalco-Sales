@@ -3,6 +3,7 @@ import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import WhatsAppButton from './components/WhatsAppButton.jsx';
 import ScrollToTop from './components/ScrollToTop.jsx';
+import ScrollProgress from './components/ScrollProgress.jsx';
 import Home from './pages/Home.jsx';
 import Products from './pages/Products.jsx';
 import Contact from './pages/Contact.jsx';
@@ -11,6 +12,7 @@ export default function App() {
   return (
     <>
       <ScrollToTop />
+      <ScrollProgress />
       <Navbar />
       <main>
         <Routes>
