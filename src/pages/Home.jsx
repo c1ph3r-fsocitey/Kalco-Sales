@@ -110,7 +110,7 @@ export default function Home() {
               transition={{ delay: 0.3, duration: 0.6 }}
             >
               <SplineScene
-                scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+                scene="https://prod.spline.design/KVvVxEgYd66Ayrc4/scene.splinecode"
                 className="hero-spline"
               />
             </motion.div>
