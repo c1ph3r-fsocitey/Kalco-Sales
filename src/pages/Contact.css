@@ -27,8 +27,8 @@
   width: 48px;
   height: 48px;
   border-radius: var(--radius-md);
-  background: rgba(3, 105, 161, 0.08);
-  color: var(--color-accent);
+  background: rgba(46, 49, 145, 0.08);
+  color: #2e3191;
   margin-bottom: var(--space-3);
 }
 

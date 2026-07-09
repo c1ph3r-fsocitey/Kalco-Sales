@@ -16,10 +16,15 @@ export default function Navbar() {
     <header className="navbar">
       <div className="container navbar-inner">
         <Link to="/" className="navbar-brand" aria-label="Kalco Sales home">
-          {/* Placeholder logo — swap with real logo file */}
-          <span className="navbar-logo" aria-hidden="true">K</span>
+          <img
+            src="/kalco-logo.webp"
+            alt="Kalco"
+            className="navbar-logo-img"
+            width="139"
+            height="38"
+          />
           <span className="navbar-name">
-            Kalco Sales
+            Sales Pvt. Ltd.
             <small>Since 1982</small>
           </span>
         </Link>

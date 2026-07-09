@@ -1,5 +1,5 @@
 .hero {
-  background: linear-gradient(180deg, #eef4f9 0%, var(--color-background) 100%);
+  background: linear-gradient(180deg, #eef0fa 0%, var(--color-background) 100%);
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -16,9 +16,9 @@
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--color-accent);
-  background: rgba(3, 105, 161, 0.08);
-  border: 1px solid rgba(3, 105, 161, 0.2);
+  color: #262d7f;
+  background: rgba(46, 49, 145, 0.08);
+  border: 1px solid rgba(46, 49, 145, 0.25);
   border-radius: 999px;
   padding: 6px 16px;
   margin-bottom: var(--space-4);
@@ -110,8 +110,8 @@
   width: 52px;
   height: 52px;
   border-radius: var(--radius-md);
-  background: rgba(3, 105, 161, 0.08);
-  color: var(--color-accent);
+  background: rgba(46, 49, 145, 0.08);
+  color: #2e3191;
   margin-bottom: var(--space-3);
 }
 

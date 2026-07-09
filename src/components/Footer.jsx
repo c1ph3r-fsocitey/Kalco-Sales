@@ -8,9 +8,9 @@ export default function Footer() {
       <div className="container footer-grid">
         <div>
           <div className="footer-brand">
-            <span className="footer-logo" aria-hidden="true">K</span>
-            <span>{SITE.name}</span>
+            <img src="/kalco-logo.webp" alt="Kalco" className="footer-logo-img" width="110" height="30" />
           </div>
+          <p className="footer-motto">The Products of Excellence</p>
           <p className="footer-tagline">{SITE.tagline}. A trusted name in the two-wheeler spare parts trade for over four decades.</p>
         </div>
 

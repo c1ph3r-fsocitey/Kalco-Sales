@@ -21,18 +21,9 @@
   color: var(--color-primary);
 }
 
-.navbar-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  border-radius: var(--radius-sm);
-  background: var(--color-primary);
-  color: var(--color-on-primary);
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 22px;
+.navbar-logo-img {
+  height: 38px;
+  width: auto;
 }
 
 .navbar-name {
@@ -40,7 +31,7 @@
   flex-direction: column;
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.1;
 }
 
