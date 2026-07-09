@@ -66,14 +66,15 @@
   justify-content: center;
 }
 
-.hero-btn-outline {
-  color: #faf7f0;
-  border-color: rgba(203, 184, 126, 0.5);
+.btn.hero-btn-outline {
+  color: #cbb87e;
+  border-color: #cbb87e;
 }
 
-.hero-btn-outline:hover {
-  border-color: #cbb87e;
-  color: #cbb87e;
+.btn.hero-btn-outline:hover {
+  background: rgba(203, 184, 126, 0.12);
+  border-color: #e0d3a4;
+  color: #e0d3a4;
 }
 
 .hero-stats {
@@ -218,14 +219,15 @@
   flex-wrap: wrap;
 }
 
-.cta-outline {
-  color: #faf7f0;
-  border-color: rgba(203, 184, 126, 0.5);
+.btn.cta-outline {
+  color: #cbb87e;
+  border-color: #cbb87e;
 }
 
-.cta-outline:hover {
-  border-color: #cbb87e;
-  color: #cbb87e;
+.btn.cta-outline:hover {
+  background: rgba(203, 184, 126, 0.12);
+  border-color: #e0d3a4;
+  color: #e0d3a4;
 }
 
 @media (max-width: 900px) {
