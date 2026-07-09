@@ -1,6 +1,6 @@
 .footer {
-  background: var(--color-primary);
-  color: #cbd5e1;
+  background: linear-gradient(180deg, #141930 0%, #10142a 100%);
+  color: #b8bdd4;
   margin-top: var(--space-8);
 }
 
@@ -31,8 +31,8 @@
 .footer-motto {
   font-family: var(--font-heading);
   font-style: italic;
-  font-size: 14px;
-  color: #ffffff;
+  font-size: 15px;
+  color: #cbb87e;
   margin-bottom: var(--space-2);
 }
 
@@ -58,7 +58,7 @@
 
 .footer nav a:hover,
 .footer div a:hover {
-  color: #ffffff;
+  color: #cbb87e;
 }
 
 .footer-bottom {
