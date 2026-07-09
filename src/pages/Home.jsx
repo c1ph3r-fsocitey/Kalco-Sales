@@ -1,10 +1,7 @@
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { SITE, whatsappLink } from '../lib/site.js';
 import { CATEGORIES } from '../data/products.js';
-import SplineScene from '../components/SplineScene.jsx';
-import Spotlight from '../components/Spotlight.jsx';
 import './Home.css';
 
 const fadeUp = {
@@ -57,26 +54,11 @@ const VALUES = [
   },
 ];
 
-function useDesktop(minWidth = 900) {
-  const [isDesktop, setIsDesktop] = useState(false);
-  useEffect(() => {
-    const mq = window.matchMedia(`(min-width: ${minWidth}px)`);
-    const update = () => setIsDesktop(mq.matches);
-    update();
-    mq.addEventListener('change', update);
-    return () => mq.removeEventListener('change', update);
-  }, [minWidth]);
-  return isDesktop;
-}
-
 export default function Home() {
-  const isDesktop = useDesktop();
-
   return (
     <>
       {/* Hero */}
       <section className="hero">
-        <Spotlight fill="white" />
         <div className="container hero-inner">
           <motion.div className="hero-text" initial="hidden" animate="visible" variants={fadeUp}>
             <span className="hero-badge">Est. {SITE.established} · Karol Bagh, New Delhi</span>
@@ -102,19 +84,6 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {isDesktop && (
-            <motion.div
-              className="hero-visual"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-            >
-              <SplineScene
-                scene="https://prod.spline.design/KVvVxEgYd66Ayrc4/scene.splinecode"
-                className="hero-spline"
-              />
-            </motion.div>
-          )}
         </div>
 
         <div className="container">
